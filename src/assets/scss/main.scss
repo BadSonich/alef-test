@@ -1,0 +1,136 @@
+@import "reset";
+@import "common";
+
+.header {
+    padding: 22px 51px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid #1111111A;
+
+    &__menu {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
+}
+
+.content {
+    max-width: 620px;
+    margin: 30px auto auto;
+}
+
+.parent-block h3 {
+    margin-bottom: 20px;
+}
+
+.parent-form {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 33px;
+}
+
+.children-block {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 11px;
+
+        button {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background-color: white;
+            color: #01A7FD;
+
+            span:before {
+                content: '';
+                display: block;
+                width: 24px;
+                height: 24px;
+                background-image: url("../plus.svg");
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: #01A7FD;
+
+                span:before {
+                    background-image: url("../plus-white.svg");
+                }
+            }
+        }
+    }
+
+    &__body {
+        display: grid;
+        gap: 10px;
+    }
+
+    & > button {
+        margin-top: 30px;
+        color: #ffff;
+        background-color: #01A7FD;
+
+        &:hover {
+            background-color: #fff;
+            color: #01A7FD;
+        }
+    }
+}
+
+.child-form {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 18px;
+
+    label {
+        width: 100%;
+    }
+
+    button {
+        padding: 10px 0;
+        border: none;
+        background-color: unset;
+        color: #01A7FD;
+
+        &:hover {
+            color: #111111;
+        }
+    }
+}
+
+.preview {
+    display: grid;
+    gap: 60px;
+
+    &-parent {
+        &__info {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+    }
+
+    &-children {
+
+        display: grid;
+        gap: 20px;
+
+        &__info {
+            padding: 10px 20px;
+            border-radius: 4px;
+            background-color: #F1F1F1;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            width: max-content;
+        }
+    }
+}
