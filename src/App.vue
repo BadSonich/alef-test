@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       parent: {},
-      children: {},
+      children: [],
       currentPath: window.location.hash
     }
   },
